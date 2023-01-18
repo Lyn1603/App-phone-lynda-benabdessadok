@@ -1,9 +1,12 @@
 <template>
     <div>
 
-        <h1>{{contact.nom}}</h1>
+        <h1 class="nom">{{contact.nom}}</h1>
 
-        <span>{{ contact.num }}</span>
+        <span class="num">{{ contact.num }}</span>
+
+          <button @click="Calling"> Appeler </button>
+
 
 
     </div>
@@ -12,6 +15,7 @@
 
 <script>
 
+
 export default{
 
 name:'CartePerso',
@@ -19,8 +23,16 @@ props: [
 
 'contact'
 
-]
+],
 
+
+methods : {
+    
 }
+
+    
+}
+
+
 
 </script>
