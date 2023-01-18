@@ -4,15 +4,13 @@
 
     <h1> Ajouter un Contact </h1>
 
-    <form>
+    <form @submit.prevent="ajoutContact" >
 
         <input type="text" v-model="formContact.nom" placeholder="Nom..">
 
-        <span class="error" v-if="formContact.nom.length < 3 && error" > Veuillez remplir ce champ </span>
 
         <input type="text" v-model="formContact.num" placeholder="Numéro...">
 
-        <span class="error" v-if="formContact.num.length < 3 && error" > Veuillez remplir ce champ </span>
 
         <button class="submit" type="submit"> Ajouter ce contact  </button>
 
@@ -34,15 +32,18 @@ export default{
     
     name : 'FormContact',
 
-    
-    data () {
+    props: [
+        'contact'
+   ],
+
+   data () {
     return{
 
         error: false,
 
         formContact: {
             nom: '',
-            num: '',
+            num: ''
             },
 
 
@@ -51,15 +52,31 @@ export default{
     },
 
 
+
     methods : {
+
         ajoutContact(){
 
-            if(this.formContact.nom === "" && this.formContact.num === ""){
 
-                this.error = true
-                
+            if(this.formContact.nom == "" || this.formContact.num == "" ){
+
+                alert('veulliez remplir les champs')
             }
-        }
+            if(this.contact.find(contact => contact.nom === this.formContact.nom)) return
+
+                this.$store.commit('ajoutContact', this.formContact)
+
+                this.error=false
+
+                this.formContact = {
+                nom: "",
+                num: ""
+                }
+
+
+            },
+
+
     }
 
 
