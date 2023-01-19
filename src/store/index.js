@@ -20,6 +20,12 @@ export default createStore({
       
       state.contact.push(contact)
 
+    },
+
+    showContact(state, contact){
+      
+      state.contact.find(contact)
+
     }
   },
   actions: {
