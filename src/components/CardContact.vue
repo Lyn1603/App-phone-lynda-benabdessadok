@@ -5,8 +5,7 @@
 
         <span class="num">{{ contact.num }}</span>
 
-          <button @click="Calling"> Appeler </button>
-
+        <button @click="call"> Appeler </button>
 
 
     </div>
@@ -18,16 +17,28 @@
 
 export default{
 
-name:'CartePerso',
+name:'CardContact',
+
 props: [
 
 'contact'
 
 ],
 
+methods :{
 
+    call(){
+
+        this.$store.commit('appelContacts',this.contact.num)
+
+
+    }
+
+
+}
     
 }
+
 
 
 

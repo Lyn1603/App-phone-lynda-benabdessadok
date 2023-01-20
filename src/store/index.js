@@ -8,6 +8,11 @@ export default createStore({
 
 
 
+    ],
+
+    appel :[
+
+
     ]
 
     
@@ -22,9 +27,9 @@ export default createStore({
 
     },
 
-    showContact(state, contact){
+    appelContacts(state, contact){
       
-      state.contact.find(contact)
+      state.appel.push(contact)
 
     }
   },

@@ -9,7 +9,7 @@
             {{ contacts }}
       </ul>
 
-    </div>3
+    </div>
 
   </template>
   
