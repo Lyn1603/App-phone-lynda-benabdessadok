@@ -1,10 +1,10 @@
 <template>
 
-<div>
+<div class="formContact">
 
     <h1> Ajouter un Contact </h1>
 
-    <form @submit.prevent="ajoutContact" >
+    <form  @submit.prevent="ajoutContact" >
 
         <input type="text" v-model="formContact.nom" placeholder="Nom..">
 
@@ -89,8 +89,34 @@ export default{
 </script>
 
 
-<style>
+<style scoped>
 
+.formContact{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    margin: 1rem;
+    padding-bottom: 1rem;
+    background-color: #eaeae8;
+    text-align: center;
+    border: solid 2px #89cce8;
+    border-radius: 10px;
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+
+form{
+   gap: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+form input,button{
+    border-radius: 9px;
+    border: #89cce8 2px solid;
+}
 
 
 

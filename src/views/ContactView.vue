@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="global">
       <h1> Listes des contacts </h1>
 
       <div class="cartes">
@@ -55,3 +55,12 @@ import CardContact from '@/components/CardContact.vue'
 }
 
 </script>
+<style scoped>
+.global{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+</style>

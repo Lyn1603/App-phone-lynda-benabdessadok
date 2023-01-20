@@ -1,7 +1,7 @@
 <template>
   <nav>
     <router-link to="/">Contact</router-link> |
-    <router-link to="/journal">Journal</router-link>
+    <router-link to="/journal">Journal</router-link> |
     <router-link to="/clavier">Clavier</router-link>
 
   </nav>
@@ -23,6 +23,9 @@
 
 nav {
   padding: 30px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
 }
 
 nav a {
@@ -31,6 +34,6 @@ nav a {
 }
 
 nav a.router-link-exact-active {
-  color: #42b983;
+ color: #4092ad;
 }
 </style>
