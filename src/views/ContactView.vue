@@ -8,8 +8,7 @@
 
           <CardContact :contact="contact" />
 
-
-          
+ 
           </div>
 
       </div>

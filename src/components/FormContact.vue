@@ -9,7 +9,7 @@
         <input type="text" v-model="formContact.nom" placeholder="Nom..">
 
 
-        <input type="text" v-model="formContact.num" placeholder="Numéro...">
+        <input type="number" v-model="formContact.num" placeholder="Numéro...">
 
 
         <button class="submit" type="submit"> Ajouter ce contact  </button>

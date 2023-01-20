@@ -1,14 +1,15 @@
 <template>
     <div class="keyboard">
-        <ul>
-            {{ contacts }}
-        </ul>
-    <input type="text" v-model="value"/>
+      
+    <input type="number" v-model="value" readonly/>
       <button v-for="key in keys" :key="key" @click="press(key)">{{ key }}</button>
       <button  @click="clear">&larr;</button>
       <button  @click="clear('all')">Tout effacer</button>
+      <ul>
+            {{ contacts }}
+      </ul>
 
-    </div>
+    </div>3
 
   </template>
   
@@ -22,7 +23,9 @@
     data() {
       return {
         value: '',
+
         keys: [...Array(10).keys()],
+
         contacts:[
 
         this.$store.state.contact
@@ -39,14 +42,12 @@
       
       press(key) {
         this.value = `${this.value}${key}`;
-        if(this.value.contains(this.$store.state.contact)){
-            alert('numéro trouvé ! ')
-        }
         
+
       },
   
   
-      clear(type) {
+      clear(type){
         if (type === 'all') this.value = '';
         else this.value = this.value.substring(0, this.value.length - 1);
       },
