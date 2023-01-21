@@ -11,7 +11,7 @@ export default createStore({
     ],
 
     appel :[
-
+        
 
     ]
 
@@ -30,8 +30,9 @@ export default createStore({
     appelContacts(state, contact){
       
       state.appel.push(contact)
+      
+    },
 
-    }
   },
   actions: {
   },

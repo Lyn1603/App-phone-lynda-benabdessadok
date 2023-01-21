@@ -1,10 +1,13 @@
 <template>
-  <div class="about">
-    <h1>Journal d'appel </h1>
+
+<h1>Journal d'appel </h1>
+
+  <div class="journal">
 
     <div v-for="contact in Call" :key="contact.num">
 
         <CardContact :contact="contact" />
+        <p class="date"> </p>
 
 
     </div>
@@ -36,7 +39,10 @@ export default{
     
     return this.$store.state.appel
       
-  }
+  },
+
+
+  
 }
 
 
@@ -44,3 +50,18 @@ export default{
 
 
 </script>
+
+
+<style scoped>
+
+.journal{
+  display: flex;
+  flex-direction: column;
+  margin-left: 20%;
+  gap: 15px;
+}
+
+
+
+
+</style>
