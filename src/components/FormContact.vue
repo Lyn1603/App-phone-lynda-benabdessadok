@@ -98,11 +98,11 @@ export default{
     width: 50%;
     margin: 1rem;
     padding-bottom: 1rem;
-    background-color: #eaeae8;
+    background-color: #9bc1d0;
     text-align: center;
-    border: solid 2px #89cce8;
+    border: solid 2px #6294a9;
     border-radius: 10px;
-    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.5);
+    box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.5);
 }
 
 
@@ -114,8 +114,9 @@ form{
     flex-direction: column;
 }
 form input,button{
+    background-color: #73b2cb;
     border-radius: 9px;
-    border: #89cce8 2px solid;
+    border: #6294a9 2px solid;
 }
 
 

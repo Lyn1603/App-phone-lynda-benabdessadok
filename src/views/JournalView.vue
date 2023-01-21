@@ -1,19 +1,25 @@
 <template>
+<div class="global">
 
-<h1>Journal d'appel </h1>
+  <h1>Journal d'appel </h1>
 
   <div class="journal">
 
     <div v-for="contact in Call" :key="contact.num">
 
         <CardContact :contact="contact" />
-        <p class="date"> </p>
+        <p class="date"> Date : {{ date }} </p>
+
 
 
     </div>
 
 
   </div>
+
+
+</div>
+
 </template>
 
 
@@ -26,6 +32,12 @@ export default{
 
 
   name : 'JournalView',
+
+  data() {
+            return {
+                date: new Date()
+            }
+        },
 
   components : {
 
@@ -54,11 +66,19 @@ export default{
 
 <style scoped>
 
+
+
 .journal{
   display: flex;
   flex-direction: column;
-  margin-left: 20%;
+  align-items: center;
   gap: 15px;
+
+}
+
+.date{
+  text-align: center;
+
 }
 
 

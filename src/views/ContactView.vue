@@ -11,8 +11,10 @@
  
           </div>
 
-      </div>
-      
+
+          
+
+      </div >
           <FormContact :contact="AddContact"  />
          
         </div>
@@ -57,10 +59,13 @@ import CardContact from '@/components/CardContact.vue'
 </script>
 <style scoped>
 .global{
+
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
+    flex-direction: wrap;
+    gap: 20px;
+    
 }
 
 </style>

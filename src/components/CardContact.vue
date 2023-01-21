@@ -5,9 +5,7 @@
 
         <p class="num"> Tel : {{ contact.num }}</p>
 
-        <p class="date"> {{ date }}</p>
-
-        <button @click="call"> Appeler </button>
+        <button @click="call"> {{calling}} </button>
 
 
     </div>
@@ -21,11 +19,13 @@ export default{
 
 name:'CardContact',
 
+
 data() {
-            return {
-                date: new Date()
-            }
-        },
+        return {
+            calling: './img/calling.png'
+        }
+    },
+
 
 props: [
 
@@ -60,12 +60,12 @@ methods :{
     display: flex;
     flex-direction: row;
     gap: 30px;
-    background-color: #eaeae8;
-    border: solid 2px #89cce8;
+    background-color: #9bc1d0;
+    border: solid 2px #6294a9;
     justify-content: center;    
     border-radius: 10px;
     box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.5);
-    width: 60vw;
+    width: 36vw;
 }
 
 .contact p {
@@ -79,7 +79,7 @@ methods :{
     border-radius: 7px;
     box-shadow: 1px 1px #c6c6c4;
     height: 50%;
-    margin-top: 5%;
+    margin-top: 4.75%;
 }
 
 </style>
