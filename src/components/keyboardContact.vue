@@ -14,7 +14,7 @@
 
     <button v-for="key in keys" :key="key" @click="press(key)">{{ key }}</button>
     <button  @click="clear">&larr;</button>
-    <button  @click="clear('all')">Tout effacer</button>
+    <button @click="calling">Appeler</button>
      
 
 
@@ -38,11 +38,9 @@
 
         keys: [...Array(10).keys()],
 
-        contacts:[
+        num:'',
 
-        this.$store.state.contact
-
-        ]
+       
         
       };
     },
@@ -54,7 +52,12 @@
       
       press(key) {
         this.value = `${this.value}${key}`;
-        
+         
+      },
+
+
+      calling(){
+        this.$store.commit('appelContacts', this.num)
       },
 
 

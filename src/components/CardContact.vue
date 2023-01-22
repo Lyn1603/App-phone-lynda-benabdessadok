@@ -1,30 +1,49 @@
 <template>
+
     <div class="contact">
 
-        <h1 class="nom"> Nom : {{contact.nom}}</h1>
 
-        <p class="num"> Tel : {{ contact.num }}</p>
 
-        <button @click="call"> {{calling}} </button>
+            <div>
 
+                <h2> Nom : {{contact.nom}}</h2>
+
+                <p> Tel : {{ contact.num }}</p>
+
+
+            </div>
+
+
+        
+        <div>
+
+            <button class="button" @click="call"> <img :src="calling" alt="" srcset=""> </button>
+
+        </div>
 
     </div>
+   
+
     
 </template>
 
 <script>
-
+import calling from '../assets/calling.png'
 
 export default{
+
 
 name:'CardContact',
 
 
-data() {
-        return {
-            calling: './img/calling.png'
-        }
-    },
+data(){
+    return{
+
+        calling : calling
+
+    } 
+},
+
 
 
 props: [
@@ -65,21 +84,22 @@ methods :{
     justify-content: center;    
     border-radius: 10px;
     box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.5);
-    width: 36vw;
+    
 }
 
 .contact p {
     margin-top: 30px;
 }
 
-.contact button {
+.button {
     color: white;
     text-decoration: none;
     background-color: #4092ad;
     border-radius: 7px;
     box-shadow: 1px 1px #c6c6c4;
-    height: 50%;
-    margin-top: 4.75%;
+    margin-top: 40px;
 }
+
+
 
 </style>

@@ -13,6 +13,10 @@ export default createStore({
     appel :[
         
 
+    ],
+
+    encours:[
+    
     ]
 
     
@@ -32,6 +36,13 @@ export default createStore({
       state.appel.push(contact)
       
     },
+
+    clavierContacts(state , contact){
+      
+      state.encours.push(contact)
+
+      
+    }
 
    
 

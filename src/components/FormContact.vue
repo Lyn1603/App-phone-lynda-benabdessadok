@@ -6,7 +6,7 @@
 
     <form  @submit.prevent="ajoutContact" >
 
-        <input type="text" v-model="formContact.nom" placeholder="Nom..">
+        <input type="text" v-model="formContact.nom" placeholder="Nom.." maxlength="10">
 
 
         <input type="number" v-model="formContact.num" placeholder="Numéro...">
@@ -69,6 +69,7 @@ export default{
                 this.error=false
 
                 this.formContact = {
+                    
                 nom: "",
                 num: ""
                 }
@@ -95,7 +96,7 @@ export default{
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 50%;
+    width: 40vw;
     margin: 1rem;
     padding-bottom: 1rem;
     background-color: #9bc1d0;

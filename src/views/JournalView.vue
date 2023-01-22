@@ -28,6 +28,7 @@
 import CardContact from '@/components/CardContact.vue'
 
 
+
 export default{
 
 
@@ -52,6 +53,7 @@ export default{
     return this.$store.state.appel
       
   },
+
 
 
   
