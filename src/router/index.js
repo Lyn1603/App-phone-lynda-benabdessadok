@@ -2,6 +2,8 @@ import { createRouter, createWebHistory } from 'vue-router'
 import ContactView from '../views/ContactView.vue'
 import JournalView from '../views/JournalView.vue'
 import ClavierView from '../views/ClavierView.vue'
+import AjoutView from '../views/AjoutView.vue'
+
 
 const routes = [
   {
@@ -20,7 +22,15 @@ const routes = [
     name: 'clavier',
     
     component: ClavierView
+  },
+  {
+    path: '/creation',
+    name: 'creation',
+
+    component: AjoutView
   }
+
+  
 ]
 
 const router = createRouter({
